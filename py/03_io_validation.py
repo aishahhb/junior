@@ -1,33 +1,33 @@
-name = str(input("Please enter your name: "))
-weight = float(input("Enter your weight (kg): "))
-height = float(input("Enter your height (cm): "))
+# Exercises:
+# 1.Create a simple calculator that takes two number and an operation from user.
+# 2.Create  a  simple  quiz  program  with  3  questions.  At  the  end  of  the  quiz, display score.
 
-#input validation
+operations = ["+", "-", "*", "/"]
+
 while True:
     try:
-        if weight <= 0 or height <= 0:
-            print("Weight and height must be positive numbers!")
+        num1 = int(input("Enter your first number: "))
+        num2 = int(input("Enter your second number: ")) 
+        operation = input(f"Choose operation ({', '.join(operations)}): ")
 
-        #must to convert cm → meter
-        height = height / 100
+        # Perform calculation
+        if operation not in operations:
+            print("Invalid operation! Exiting calculator.")
+            break
 
-        #calculate bmi
-        bmi = weight / (height ** 2)
+        match operation:
+            case '+':
+                result = num1 + num2
+            case '-':
+                result = num1 - num2
+            case '*':
+                result = num1 * num2
+            case '/':
+                result = num1 / num2 if num2 != 0 else "Error: Division by zero!"
+            case _:
+                result = "Invalid operation"
 
-        if bmi < 18.5:
-            category = "Underweight"
-        elif bmi < 25:
-            category = "Normal"
-        elif bmi < 30:
-            category = "Overweight"
-        else:
-            category = "Obese"
-        break
-
+        print(f"{num1} {operation} {num2} = {result}")
+        
     except ValueError:
-        print(f"Please enter the valid value for weight and height")
-
-#output validation
-print(f"Weight: {weight}kg, Height: {height}m")
-print(f"{name}, your BMI is {round(bmi,2)}, category: {category}")
-
+        print("Please enter the correct value!")
