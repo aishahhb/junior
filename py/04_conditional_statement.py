@@ -3,16 +3,17 @@
 #   intounderweight(<18.5),  
 #   normal  weight(<24.9),  
 #   overweight(<29.9),  and
-#   obesity(<30.0). 
-# (formula = kg/m^2)
+#   obesity(<30.0) 
+#   (formula = kg/m^2)
 
 name = str(input("Please enter your name: "))
-weight = float(input("Enter your weight (kg): "))
-height = float(input("Enter your height (cm): "))
 
 #input validation
 while True:
     try:
+        weight = float(input("Enter your weight (kg): "))
+        height = float(input("Enter your height (cm): "))
+
         if weight <= 0 or height <= 0:
             print("Weight and height must be positive numbers!")
 
