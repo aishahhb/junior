@@ -2,14 +2,14 @@ name = str(input("Please enter your name: "))
 weight = float(input("Enter your weight (kg): "))
 height = float(input("Enter your height (cm): "))
 
-#must to convert cm → meter
-height = height / 100
-
 #input validation
 while True:
     try:
         if weight <= 0 or height <= 0:
             print("Weight and height must be positive numbers!")
+
+        #must to convert cm → meter
+        height = height / 100
 
         #calculate bmi
         bmi = weight / (height ** 2)
