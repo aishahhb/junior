@@ -7,3 +7,36 @@ While Loop: Unknown iteration: When condition controls loop
 
 Use for 👉 when count is known
 Use while 👉 when condition matters
+
+
+#<------------------LIST----------------------------->
+[index] = value vs insert()
+⚖️ Key Difference
+Code	                    What it does        when to use
+list[3] = 'eggs'	        Replace existing    update/overwrite an existing item
+list.insert(3, 'eggs')	    Add new item        add new item without deleting anything
+
+insert() vs append()
+⚖️ Key differences
+Feature	            append()	            insert()
+Position	        Always at the end	    Any index you choose
+Replaces item	    ❌ No	               ❌ No
+Shifts items	    ❌ No                   ✅ Yes
+Use case	        Add to end quickly      Insert at exact position
+
+Summary [index] = value vs insert() vs append()
+[index] = value → replace
+insert(index, value) → add anywhere, shift items
+append(value) → add at the end
+
+
+<------------------------------ Tuples ---------------------->
+tuple is like a list, but:
+1. Immutable → you cannot change, add, or remove items once created
+2. Ordered → items have a specific order
+3. Can contain any data type
+
+- Data should not change (like coordinates, days of the week)
+- slightly faster performance than lists
+- use as dictionary keys (lists cannot be keys, tuples can)
+
