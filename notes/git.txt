@@ -1,0 +1,14 @@
+#Knowledge
+
+# First time in a new project
+git init     # initialize repo (once); usually run only the first time you turn a folder into a Git repository
+git add .    # stage files
+git commit -m "Initial commit"      # commit first version
+git remote add origin <repo_url>    # link to GitHub
+git push -u origin main             # push to remote
+
+# After repo is initialized
+# For new changes:
+git add <files>                     #Stage the files you want to track
+git commit -m "Update something"    #Save changes in local repository
+git push                            #Send changes to GitHub (remote repo)
