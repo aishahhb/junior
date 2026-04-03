@@ -1,14 +1,9 @@
 #Knowledge
 
-# First time in a new project
-git init     # initialize repo (once); usually run only the first time you turn a folder into a Git repository
-git add .    # stage files
-git commit -m "Initial commit"      # commit first version
-git remote add origin <repo_url>    # link to GitHub
-git push -u origin main             # push to remote
+#loops
+For Loop: Known iteration: runs over a sequence or range
+While Loop: Unknown iteration: When condition controls loop
+*Iteration means repeating a set of instructions multiple times.
 
-# After repo is initialized
-# For new changes:
-git add <files>                     #Stage the files you want to track
-git commit -m "Update something"    #Save changes in local repository
-git push                            #Send changes to GitHub (remote repo)
+Use for 👉 when count is known
+Use while 👉 when condition matters
