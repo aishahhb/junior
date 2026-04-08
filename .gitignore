@@ -1,4 +1,4 @@
 .env
 desktop.ini
-# venv
-# __pycache__
+virtual-env
+__pycache__
