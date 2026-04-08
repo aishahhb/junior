@@ -40,3 +40,34 @@ tuple is like a list, but:
 - slightly faster performance than lists
 - use as dictionary keys (lists cannot be keys, tuples can)
 
+LAMBDA
+- one line no need used def to declare as functions (its directly)
+
+
+
+MongoDB
+- setup .env file in py folder
+
+Development IP address 
+set 0.0.0.0/0 - can access from anywhere
+
+1.Create virtual environment : python -m venv myvenv            #myvenv is folder name - can name it anything
+    - after create check folder myvenv will appear - make sure at root folder (MyFirstJouniorPy)
+2.Activate virtual environment: myvenv\Scripts\activate
+    - green color (folder name myvenv) will appear at terminal
+
+to activate virtual environment (just by pass) or if got error when run command myvenv\Scripts\activate 
+- allow all scripts to run without any security checks.
+run at terminal: Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass
+
+Deactivate current venv:
+run command: deactivate
+
+if got Error connecting to MongoDB: {e}
+especially about timeout - take too long
+check DNS:
+Steps (Windows example):
+1. Open Control Panel → Network & Internet → Network Connections
+2. Right-click your network → Properties → IPv4 → Properties
+3. Set DNS to 8.8.8.8 and 8.8.4.4
+4. Save and test again
